@@ -34,6 +34,12 @@ public class MainProgram{
 			case 4 :
 				Problem4.Main();
 				break;
+			case 5 :
+				Problem5.Main();
+				break;
+			case 6 :
+				Problem6.Main();
+				break;
 			default : 
 				System.out.println("ID error");
 				break;

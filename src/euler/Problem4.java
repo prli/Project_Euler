@@ -3,24 +3,32 @@ package euler;
 public class Problem4 {
 	//999 * 999 is max
 	final static int maxLimit = 998001;
+	//100 * 100 is min
+	final static int minLimit = 10000;
 	public static void Main() {
-		int term1 = 999;
-		int term2 = 999;
-		int product = 0;
-		boolean palindromeFound = false;
-		while(term1 > 99 && !palindromeFound){
-			int i = 0;
-			while(i < 10 && term2 > 99){
-				term2 = term2 - i++;
-				product = term1 * term2;
-				if(isPalindrome(String.valueOf(product))){
-					palindromeFound = true;
-					System.out.println("Problem 4: " + product);
-					break;
+		int max = 0;
+		for(int i = 999; i > 100; i--){
+			for(int j = 999; j > 100; j--){
+				if(isPalindrome(Integer.toString(i*j)) && (i*j > max)){
+					max = i*j;
 				}
 			}
-			term1--;
 		}
+		System.out.println("Problem 4: " + max);
+	}
+	
+	private static String getNextPolindrome(int maxLimit){
+		String polindrome = new String();
+		boolean found = false;
+		int product = 0;
+		while(!found){
+			
+			if(isPalindrome(Integer.toString(product))){
+				polindrome = Integer.toString(product);
+				found = true;
+			}
+		}
+		return polindrome;
 	}
 	
 	private static boolean isPalindrome(String num){
