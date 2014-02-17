@@ -10,7 +10,7 @@ public class Problem5 {
 
 		while(true){
 			if(divisbleByAll(RANGE, num)){
-				System.out.println("Problem 4: " + num);
+				System.out.println("Problem 5: " + num);
 				break;
 			}else{
 				num+=RANGE;

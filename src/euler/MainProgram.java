@@ -1,6 +1,7 @@
 package euler;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -20,7 +21,7 @@ public class MainProgram{
     }
 
 
-	private static void solveProblem(int id) {
+	private static void solveProblem(int id) throws IOException {
 		switch (id){
 			case 1 :
 				Problem1.Main();
@@ -39,6 +40,12 @@ public class MainProgram{
 				break;
 			case 6 :
 				Problem6.Main();
+				break;
+			case 7 :
+				Problem7.Main();
+				break;
+			case 8 :
+				Problem8.Main();
 				break;
 			default : 
 				System.out.println("ID error");
